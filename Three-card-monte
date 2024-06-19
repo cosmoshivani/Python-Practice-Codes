@@ -1,0 +1,16 @@
+# A simple Three card monte implementation
+# Randomly choose a cup to hide the ball and ask the player to select a cup that contains the ball. They have three guesses in this case
+# If correct, game terminates ###
+
+import random
+
+options = ['a', 'b', 'c']
+
+for i in range(3):
+    choose = random.choice(options)
+    user = input("choose from a, b, and c: ")
+    if user == choose:
+        print("you won! It is " + user)
+        break
+    else:
+        print("nope!")
